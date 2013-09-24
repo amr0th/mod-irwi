@@ -1,8 +1,8 @@
-require File.expand_path("../lib/irwi/version", __FILE__)
+require File.expand_path("../lib/irwi_mod/version", __FILE__)
 
 Gem::Specification.new do |s|
-  s.name = "irwi-mod"
-  s.version = Irwi::VERSION::STRING
+  s.name = "irwi_mod"
+  s.version = IrwiMod::VERSION::STRING
   s.platform = Gem::Platform::RUBY
   s.authors = ["Ricardo Henriques"]
   s.email = ["ricardo.n.henriques@gmail.com"]
@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency "activerecord", ">= 3.0.0"
   s.add_dependency "activesupport", ">= 3.0.0"
   s.add_dependency "actionpack", ">= 3.0.0"
+  s.add_dependency "RedCloth", ">= 4.2.9"
   s.add_dependency "rails_autolink", ">= 1.0" # TODO should be optional
 
   # Development dependencies
@@ -30,6 +31,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
 
   # Info
-  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Irwi", "--main", "README.rdoc"]
+  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "IrwiMod", "--main", "README.rdoc"]
 
 end

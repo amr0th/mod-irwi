@@ -4,11 +4,11 @@ require "action_controller"
 
 require "protected_attributes"
 
-describe Irwi::Extensions::Controllers::WikiPages do
+describe IrwiMod::Extensions::Controllers::WikiPages do
 
   class WikiPage; end
   class WikiPagesController < ActionController::Base
-    include Irwi::Extensions::Controllers::WikiPages
+    include IrwiMod::Extensions::Controllers::WikiPages
 
     private
 

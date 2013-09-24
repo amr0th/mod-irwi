@@ -1,12 +1,12 @@
 require "spec_helper"
 
-describe Irwi::Paginators::WillPaginate do
+describe IrwiMod::Paginators::WillPaginate do
 
   before :all do
   end
 
   before :each do
-    @p = Irwi::Paginators::WillPaginate.new
+    @p = IrwiMod::Paginators::WillPaginate.new
   end
 
   specify "should paginate collection" do

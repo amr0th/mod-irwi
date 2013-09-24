@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe Irwi::Formatters::RedCloth do
+describe IrwiMod::Formatters::RedCloth do
 
   before(:each) do
-    @f = Irwi::Formatters::RedCloth.new
+    @f = IrwiMod::Formatters::RedCloth.new
   end
 
   specify "should proces bold text" do

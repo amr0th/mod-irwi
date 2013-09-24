@@ -2,8 +2,8 @@ require 'rubygems'
 
 require 'active_support/test_case'
 require 'active_record'
-require 'irwi'
-require 'irwi/config'
+require 'irwi_mod'
+require 'irwi_mod/config'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -33,6 +33,6 @@ end
 RSpec.configure do |config|
 end
 
-module Irwi::Helpers::WikiPagesHelper
+module IrwiMod::Helpers::WikiPagesHelper
   attr_accessor :params
 end

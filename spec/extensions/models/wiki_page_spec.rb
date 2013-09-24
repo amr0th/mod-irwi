@@ -2,7 +2,7 @@ require "spec_helper"
 
 require "active_record"
 
-describe Irwi::Extensions::Models::WikiPage do
+describe IrwiMod::Extensions::Models::WikiPage do
 
   class AbstractPage < ActiveRecord::Base
 
@@ -21,13 +21,13 @@ describe Irwi::Extensions::Models::WikiPage do
   it { should_not be_nil }
 
   before :all do
-    Irwi::config.page_attachment_class_name = nil
+    IrwiMod::config.page_attachment_class_name = nil
 
     @cls = Class.new AbstractPage do
 
       self.table_name  = 'pages'
 
-      include Irwi::Extensions::Models::WikiPage
+      include IrwiMod::Extensions::Models::WikiPage
     end
   end
 
@@ -59,13 +59,13 @@ describe Irwi::Extensions::Models::WikiPage do
   context "with attachments" do
 
     before :all do
-      Irwi::config.page_attachment_class_name = 'WikiPageAttachment'
+      IrwiMod::config.page_attachment_class_name = 'WikiPageAttachment'
 
       @cls = Class.new AbstractPage do
 
         self.table_name  = 'pages'
 
-        include Irwi::Extensions::Models::WikiPage
+        include IrwiMod::Extensions::Models::WikiPage
       end
     end
 

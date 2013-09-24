@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe Irwi::Paginators::None do
+describe IrwiMod::Paginators::None do
 
   before(:each) do
-    @p = Irwi::Paginators::None.new
+    @p = IrwiMod::Paginators::None.new
   end
 
   specify "should paginate collection - call find" do

@@ -3,7 +3,7 @@ require "spec_helper"
 class PageAttachment < ActiveRecord::Base
 end
 
-describe Irwi::Helpers::WikiPagesHelper do
+describe IrwiMod::Helpers::WikiPagesHelper do
   
   it { should_not be_nil }
   
@@ -11,7 +11,7 @@ describe Irwi::Helpers::WikiPagesHelper do
     
     before(:each) do
       @m = Object.new
-      @m.send :extend, Irwi::Helpers::WikiPagesHelper
+      @m.send :extend, IrwiMod::Helpers::WikiPagesHelper
     end
     
     it { @m.should respond_to(:wiki_page_form) }
@@ -72,8 +72,8 @@ describe Irwi::Helpers::WikiPagesHelper do
     it { @m.should respond_to(:wt) }
     
     specify "should format and sanitize content with current formatter and #sanitize" do      
-      Irwi.config.formatter = mock 'Formatter'
-      Irwi.config.formatter.should_receive(:format).with('Page content').and_return('Formatted content')
+      IrwiMod.config.formatter = mock 'Formatter'
+      IrwiMod.config.formatter.should_receive(:format).with('Page content').and_return('Formatted content')
       
       @m.should_receive(:auto_link).with('Formatted content').and_return('Formatted content with links')
       @m.should_receive(:sanitize).with('Formatted content with links').and_return('Formatted and sanitized content with links')
@@ -130,7 +130,7 @@ describe Irwi::Helpers::WikiPagesHelper do
       page_class = mock "WikiPageClass"
       page_class.should_receive(:find_by_title).with('Page title').and_return(nil)
       
-      Irwi.config.should_receive(:page_class).and_return(page_class)
+      IrwiMod.config.should_receive(:page_class).and_return(page_class)
       
       @m.should_receive(:url_for).with( :controller => 'wiki_pages', :action => :show, :path => 'Page title' ).and_return('url')
       
@@ -144,7 +144,7 @@ describe Irwi::Helpers::WikiPagesHelper do
       page_class = mock "WikiPageClass"
       page_class.should_receive(:find_by_title).with('Page title').and_return(page)
       
-      Irwi.config.should_receive(:page_class).and_return(page_class)
+      IrwiMod.config.should_receive(:page_class).and_return(page_class)
       
       @m.should_receive(:url_for).with( :controller => 'wiki_pages', :action => :show, :path => 'page_path' ).and_return('url')
       

@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe Irwi::Config do
+describe IrwiMod::Config do
 
   before(:each) do
-    @o = Irwi::Config.new
+    @o = IrwiMod::Config.new
   end
 
   specify "should save selected user_class_name" do
@@ -39,7 +39,7 @@ describe Irwi::Config do
   end
 
   specify "should select RedCloth as formatter by default" do
-    Irwi::Formatters::RedCloth.should_receive(:new).and_return(:red_cloth_formatter)
+    IrwiMod::Formatters::RedCloth.should_receive(:new).and_return(:red_cloth_formatter)
 
     @o.formatter.should == :red_cloth_formatter
   end
@@ -50,19 +50,19 @@ describe Irwi::Config do
   end
 
   specify "should select DiffLcs as comparator by default" do
-    Irwi::Comparators::DiffLcs.should_receive(:new).and_return(:diff_lcs_comparator)
+    IrwiMod::Comparators::DiffLcs.should_receive(:new).and_return(:diff_lcs_comparator)
 
     @o.comparator.should == :diff_lcs_comparator
   end
 
   specify "should contain 'all' action in system pages" do
-    Irwi.config.system_pages['all'].should == 'all'
+    IrwiMod.config.system_pages['all'].should == 'all'
   end
 
   specify "should add action in system pages" do
-    Irwi.config.system_pages['custom'].should be_nil
-    Irwi.config.add_system_page :custom, '!custom_page'
-    Irwi.config.system_pages['custom'].should == '!custom_page'
+    IrwiMod.config.system_pages['custom'].should be_nil
+    IrwiMod.config.add_system_page :custom, '!custom_page'
+    IrwiMod.config.system_pages['custom'].should == '!custom_page'
   end
 
 end

@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe Irwi::Comparators::DiffLcs do
+describe IrwiMod::Comparators::DiffLcs do
 
   before(:each) do
-    @c = Irwi::Comparators::DiffLcs.new
+    @c = IrwiMod::Comparators::DiffLcs.new
   end
 
   specify "should render change for replaced text" do
