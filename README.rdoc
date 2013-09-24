@@ -6,7 +6,7 @@ Adds wiki functionality to your application. Based on http://github.com/alno/irw
 
 Add to your Gemfile:
 
-gem 'irwi-mod', :git => 'https://github.com/amr0th/amr0th-irwi.git'
+gem 'irwi-mod', :git => 'https://github.com/amr0th/mod-irwi.git'
 
 
 
