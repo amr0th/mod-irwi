@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.authors = ["Ricardo Henriques"]
   s.email = ["ricardo.n.henriques@gmail.com"]
-  s.homepage = "hhttps://github.com/amr0th/amr0th-irwi"
+  s.homepage = "http://github.com/amr0th/mod-irwi"
   s.summary = "Adds wiki functionality to your application. Based on http://github.com/alno/irwi"
   s.description = "Adds wiki functionality. Based on http://github.com/alno/irwi."
 
