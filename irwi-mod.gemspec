@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.email = ["ricardo.n.henriques@gmail.com"]
   s.homepage = "http://github.com/amr0th/mod-irwi"
   s.summary = "Adds wiki functionality to your application. Based on http://github.com/alno/irwi"
+  s.licenses = ['MIT', 'GPL-2']
   s.description = "Adds wiki functionality. Based on http://github.com/alno/irwi."
 
   s.required_rubygems_version = ">= 1.3.6"
